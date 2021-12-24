@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default class IOComponents extends React.Component{
-    render(){
-        return(
-            <div>
-                IOComponents Component
-            </div>
-        );
-    }
-}
+const IOComponents = () => {
+    return(
+        <div>
+            IOComponents Component
+        </div>
+    );
+};
+
+export default IOComponents;

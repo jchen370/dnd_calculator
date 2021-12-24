@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default class InventoryList extends React.Component{
-    render(){
-        return(
-            <div>
-                InventoryList Component
-            </div>
-        );
-    }
-}
+const InventoryList = () => {
+    return(
+        <div>
+            InventoryList Component
+        </div>
+    );
+};
+
+export default InventoryList;
