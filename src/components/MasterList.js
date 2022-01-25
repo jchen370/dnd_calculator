@@ -1,24 +1,13 @@
 import React from "react";
+import useMasterData from "../hooks/useMasterList";
 import "../style/MasterList.css";
 
-const renderRows = (props) => {
-    let masterData = props.masterData;
+const MasterList = () => {
+    const {
+        masterData,
+        renderRows
+    } = useMasterData();
 
-    if (masterData) {
-        return Object.entries(masterData).map((item) => {
-            let data = item[1];
-            return (
-                <tr className="masterlist-row" key={data.index}>
-                    <td>{data.name}</td>
-                    <td>{data.cost.quantity}</td>
-                    <td>{data.cost.unit}</td>
-                </tr>
-            );
-        });
-    }
-};
-
-const MasterList = (props) => {
     return (
         <div className="masterlist">
             <h1>Master Item List</h1>
@@ -31,7 +20,7 @@ const MasterList = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {renderRows(props)}
+                        {renderRows(masterData)}
                     </tbody>
                 </table>
             </div>
